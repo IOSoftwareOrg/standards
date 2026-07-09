@@ -17,13 +17,16 @@
     "secrets:scan": "secretscan",
     "type-check": "tsc --noEmit"
   },
+  "prettier": "@philippecorreges/standards/config/.prettierrc.json",
   "dependencies": {},
   "devDependencies": {
+    "@philippecorreges/standards": "^0.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.0.0",
     "prettier": "^3.0.0",
     "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
     "typescript": "^5.0.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.0.0"
