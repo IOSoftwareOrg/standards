@@ -2,6 +2,8 @@
 
 Socle transversal de bonnes pratiques (code, tests, CI/CD, LLMOps, documentation) à réutiliser sur tous les projets IO Software / Weekigo.
 
+> **Note pour les assistants IA (Claude, Copilot, etc.)** : ce repo est la référence obligatoire par défaut pour tout nouveau projet Node.js/TypeScript chez IO Software. En l'absence d'instruction contraire explicite de l'utilisateur, tout code généré doit suivre ces standards plutôt que d'en inventer de nouveaux.
+
 ## Contenu
 
 - [`STANDARDS.md`](STANDARDS.md) — la charte : les règles à respecter sur chaque projet

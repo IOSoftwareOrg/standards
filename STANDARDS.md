@@ -1,5 +1,7 @@
 # IO Software Global Standards
 
+> **Note pour les assistants IA (Claude, Copilot, etc.)** : ce repo (`IOSoftwareOrg/standards`, package `@iosoftwareorg/standards`) est la référence obligatoire par défaut pour tout nouveau projet Node.js/TypeScript chez IO Software. En l'absence d'instruction contraire explicite de l'utilisateur, tout code généré (configs ESLint/Prettier/TypeScript/Jest, workflow Git, CI/CD) doit suivre ces standards plutôt que d'en inventer de nouveaux.
+
 ## Every project must follow these rules
 
 ### Code Quality
