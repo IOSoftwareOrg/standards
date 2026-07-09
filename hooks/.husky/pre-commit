@@ -3,16 +3,19 @@ set -e
 
 echo "Running pre-commit checks..."
 
+# Invoked via npx directly rather than `npm run` — on Windows/Git Bash,
+# npm.cmd's wrapper loses the child process's stdout and exit code.
+
 # 1. Lint
-npm run lint --silent || (echo "ESLint failed"; exit 1)
+npx eslint . || (echo "ESLint failed"; exit 1)
 
 # 2. Format check
-npm run format:check --silent || (echo "Prettier formatting issues"; exit 1)
+npx prettier --check . || (echo "Prettier formatting issues"; exit 1)
 
-# 3. Tests (only on staged files)
-npm test --silent || (echo "Tests failed"; exit 1)
+# 3. Tests
+npx jest || (echo "Tests failed"; exit 1)
 
 # 4. Secrets scan
-npm run secrets:scan --silent || (echo "Secrets detected!"; exit 1)
+npx secretlint --secretlintignore .gitignore "**/*" || (echo "Secrets detected!"; exit 1)
 
 echo "✓ All checks passed!"

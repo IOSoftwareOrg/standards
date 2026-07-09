@@ -1,3 +1,0 @@
-{
-  "extends": ["@iosoftwareorg/standards/config/.eslintrc.json"]
-}
