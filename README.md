@@ -14,7 +14,9 @@ Socle transversal de bonnes pratiques (code, tests, CI/CD, LLMOps, documentation
 
 ## Comment un projet en hérite
 
-Ce socle n'est pas branché en submodule Git — par choix, pour rester simple sur un usage solo. Chaque nouveau projet copie les fichiers pertinents au démarrage (voir `docs/SETUP.md`), et les resynchronise manuellement si `standards` évolue.
+`standards` est publié comme package npm (`@philippecorreges/standards`) sur GitHub Packages. Un projet l'installe en devDependency et **étend** ses configs (ESLint, TypeScript, Jest, Prettier) au lieu de les copier — voir `docs/SETUP.md`. Les mises à jour se font via `npm update @philippecorreges/standards`, ou automatiquement proposées en PR par Dependabot (`templates/.github/dependabot.yml`).
+
+Seuls les fichiers "à copier une fois" (hooks Husky, workflows GitHub Actions, `.gitignore`, `.env.example`) restent des templates copiés au démarrage — ils vivent dans le projet consommateur, pas dans `node_modules`.
 
 ## Principe
 
