@@ -24,6 +24,7 @@
   - `dev` merge dans `main` via **Pull Request** au moment d'une release (CI verte + 1 review requise)
 - **No force-push** to `main` or `dev`: ever
 - **Branch protection**: `main` et `dev` exigent chacune 1 approbation + CI pass avant merge
+- **Pas d'attribution d'outil IA comme contributeur** : aucun commit ne doit contenir de trailer `Co-Authored-By` (ou équivalent) mentionnant un assistant IA (Claude, Copilot, ChatGPT, etc.). L'auteur humain qui valide et pousse le commit en est le seul contributeur — l'IA est un outil, pas un committer.
 
 ### Error Handling & Logging
 - **Every async function** has try-catch
