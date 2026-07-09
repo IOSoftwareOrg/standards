@@ -1,0 +1,3 @@
+{
+  "extends": ["@philippecorreges/standards/config/.eslintrc.json"]
+}

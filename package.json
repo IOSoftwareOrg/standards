@@ -1,0 +1,30 @@
+{
+  "name": "@philippecorreges/standards",
+  "version": "0.1.0",
+  "description": "IO Software cross-project engineering standards: shareable lint/format/test configs, CI workflow templates, git hooks, and docs.",
+  "files": [
+    "config",
+    "templates",
+    "hooks",
+    "ci",
+    "docs",
+    "STANDARDS.md",
+    "QUICK_START.md",
+    "README.md"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilippeCorreges/standards.git"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.js"
+  },
+  "devDependencies": {
+    "yaml": "^2.4.0"
+  },
+  "license": "UNLICENSED"
+}
