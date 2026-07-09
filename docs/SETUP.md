@@ -1,6 +1,6 @@
 # SETUP — Initialiser un nouveau projet avec les standards
 
-Depuis la v0.1.0, `standards` est un package npm publié sur GitHub Packages (`@philippecorreges/standards`). Les projets ne copient plus les fichiers de config : ils installent le package et **étendent** ses configs (`extends`), ce qui rend les mises à jour aussi simples qu'un `npm update`.
+Depuis la v0.1.0, `standards` est un package npm publié sur GitHub Packages (`@iosoftwareorg/standards`). Les projets ne copient plus les fichiers de config : ils installent le package et **étendent** ses configs (`extends`), ce qui rend les mises à jour aussi simples qu'un `npm update`.
 
 ## 1. Authentification à GitHub Packages
 
@@ -34,7 +34,7 @@ Ces fichiers `templates/.eslintrc.json`, `templates/tsconfig.json` et `templates
 
 ## 3. Fusionner package.json
 
-Ne pas écraser le `package.json` du projet — fusionner les `scripts`, le champ `"prettier"`, et les `devDependencies` de `templates/package.json` dedans (notamment `@philippecorreges/standards`).
+Ne pas écraser le `package.json` du projet — fusionner les `scripts`, le champ `"prettier"`, et les `devDependencies` de `templates/package.json` dedans (notamment `@iosoftwareorg/standards`).
 
 ## 4. Installer et activer les hooks
 
@@ -67,12 +67,12 @@ Dans GitHub → Settings → Environments, créer `staging` et `production`, et 
 2. Dans GitHub → Settings → Branches, ajouter une règle de protection pour `main` ET pour `dev` : exiger une Pull Request avant merge, au moins 1 review, et que les checks CI (`test`) passent. Interdire le push direct sur les deux.
 3. Définir `dev` comme branche par défaut du repo (Settings → Branches → Default branch) si tu veux que les nouvelles PR de contributeurs pointent vers `dev` plutôt que `main`.
 4. Workflow au quotidien : créer une branche depuis `dev` (`feature/...`, `fix/...`) → PR vers `dev` → une fois validé, PR de `dev` vers `main` pour une release.
-5. `templates/.github/dependabot.yml` ouvre automatiquement une PR vers la branche par défaut du projet à chaque nouvelle version publiée de `@philippecorreges/standards` — elle passe par le même circuit PR + CI + review avant merge.
+5. `templates/.github/dependabot.yml` ouvre automatiquement une PR vers la branche par défaut du projet à chaque nouvelle version publiée de `@iosoftwareorg/standards` — elle passe par le même circuit PR + CI + review avant merge.
 
 ## 9. Mettre à jour les standards plus tard
 
 ```bash
-npm update @philippecorreges/standards
+npm update @iosoftwareorg/standards
 ```
 
 Ou laisser Dependabot ouvrir la PR automatiquement (voir point 8.5).
