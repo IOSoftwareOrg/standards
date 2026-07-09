@@ -1,0 +1,39 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+# `staging` and `production` must be configured as GitHub Environments
+# (Settings -> Environments). Add required reviewers on `production`
+# to enforce manual approval before a production deploy runs.
+
+jobs:
+  deploy-staging:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy to staging
+        run: npm run deploy:staging
+
+  deploy-production:
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy to production
+        run: npm run deploy:prod
