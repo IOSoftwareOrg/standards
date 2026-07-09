@@ -1,0 +1,8 @@
+{
+  "extends": "@philippecorreges/standards/config/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"]
+}
