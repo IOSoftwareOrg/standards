@@ -1,6 +1,6 @@
 {
   "name": "@iosoftwareorg/standards",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "IO Software cross-project engineering standards: shareable lint/format/test configs, CI workflow templates, git hooks, and docs.",
   "files": [
     "config",
