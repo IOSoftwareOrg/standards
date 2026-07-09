@@ -23,7 +23,7 @@ See `.env.example`.
 
 ## Standards
 
-This project inherits from [io-software/standards](https://github.com/PhilippeCorreges/standards). See `STANDARDS.md` there for the full charter.
+This project inherits from [IOSoftwareOrg/standards](https://github.com/IOSoftwareOrg/standards). See `STANDARDS.md` there for the full charter.
 
 ## Troubleshooting
 

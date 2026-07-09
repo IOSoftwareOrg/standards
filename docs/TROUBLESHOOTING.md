@@ -34,11 +34,11 @@ Vérifier que l'environnement GitHub `production` est bien configuré avec les r
 
 Vérifier qu'il ne s'agit pas réellement d'une clé committée par erreur avant d'ignorer l'alerte. Si c'est un faux positif confirmé (ex. exemple de clé dans la doc), l'exclure explicitement dans la config de l'outil de scan plutôt que de contourner le hook avec `--no-verify`.
 
-## `npm install` échoue avec 401/403 sur `@philippecorreges/standards`
+## `npm install` échoue avec 401/403 sur `@iosoftwareorg/standards`
 
 GitHub Packages exige une authentification même pour un package public. Vérifier :
 - Qu'un Personal Access Token (`read:packages`) est bien exporté en `GITHUB_PACKAGES_TOKEN` (ou présent dans `~/.npmrc`).
-- Que le `.npmrc` du projet contient bien `@philippecorreges:registry=https://npm.pkg.github.com`.
+- Que le `.npmrc` du projet contient bien `@iosoftwareorg:registry=https://npm.pkg.github.com`.
 - En CI : que le workflow a `permissions: packages: write` (pour publier) ou au minimum `read` (pour installer), et utilise `secrets.GITHUB_TOKEN`.
 
 ## Divergence entre les configs locales et celles du repo `standards`

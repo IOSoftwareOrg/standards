@@ -1,6 +1,6 @@
 {
-  "name": "@philippecorreges/standards",
-  "version": "0.1.0",
+  "name": "@iosoftwareorg/standards",
+  "version": "0.1.1",
   "description": "IO Software cross-project engineering standards: shareable lint/format/test configs, CI workflow templates, git hooks, and docs.",
   "files": [
     "config",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PhilippeCorreges/standards.git"
+    "url": "git+https://github.com/IOSoftwareOrg/standards.git"
   },
   "scripts": {
     "validate": "node scripts/validate.js"

@@ -14,7 +14,7 @@ Socle transversal de bonnes pratiques (code, tests, CI/CD, LLMOps, documentation
 
 ## Comment un projet en hérite
 
-`standards` est publié comme package npm (`@philippecorreges/standards`) sur GitHub Packages. Un projet l'installe en devDependency et **étend** ses configs (ESLint, TypeScript, Jest, Prettier) au lieu de les copier — voir `docs/SETUP.md`. Les mises à jour se font via `npm update @philippecorreges/standards`, ou automatiquement proposées en PR par Dependabot (`templates/.github/dependabot.yml`).
+`standards` est publié comme package npm (`@iosoftwareorg/standards`) sur GitHub Packages. Un projet l'installe en devDependency et **étend** ses configs (ESLint, TypeScript, Jest, Prettier) au lieu de les copier — voir `docs/SETUP.md`. Les mises à jour se font via `npm update @iosoftwareorg/standards`, ou automatiquement proposées en PR par Dependabot (`templates/.github/dependabot.yml`).
 
 Seuls les fichiers "à copier une fois" (hooks Husky, workflows GitHub Actions, `.gitignore`, `.env.example`) restent des templates copiés au démarrage — ils vivent dans le projet consommateur, pas dans `node_modules`.
 
