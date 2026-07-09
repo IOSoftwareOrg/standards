@@ -2,14 +2,19 @@ name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
 
 # `staging` and `production` must be configured as GitHub Environments
 # (Settings -> Environments). Add required reviewers on `production`
 # to enforce manual approval before a production deploy runs.
+#
+# `dev` deploys to staging; `main` (fed by dev -> main PRs) deploys to
+# production. The two jobs are mutually exclusive by branch, not
+# sequential.
 
 jobs:
   deploy-staging:
+    if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     environment: staging
     steps:
@@ -24,7 +29,7 @@ jobs:
         run: npm run deploy:staging
 
   deploy-production:
-    needs: deploy-staging
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: production
     steps:

@@ -16,8 +16,14 @@
   - `fix: handle null city in Blaise`
   - `docs: update README with LLMOps section`
   - `refactor: extract RAG logic to module`
-- **No force-push to main**: ever
-- **Branch protection**: main requires 1 approval + CI pass
+- **Branching strategy**:
+  - `main` — production, toujours déployable, protégée (pas de push direct)
+  - `dev` — branche d'intégration, protégée (pas de push direct)
+  - Le travail se fait sur des branches courtes créées depuis `dev` (`feature/...`, `fix/...`)
+  - Les features/fix mergent dans `dev` via **Pull Request** (CI verte + 1 review requise)
+  - `dev` merge dans `main` via **Pull Request** au moment d'une release (CI verte + 1 review requise)
+- **No force-push** to `main` or `dev`: ever
+- **Branch protection**: `main` et `dev` exigent chacune 1 approbation + CI pass avant merge
 
 ### Error Handling & Logging
 - **Every async function** has try-catch
