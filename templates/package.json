@@ -1,5 +1,5 @@
 {
-  "name": "@io-software/project",
+  "name": "@iosoftwareorg/project",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -17,10 +17,10 @@
     "secrets:scan": "secretscan",
     "type-check": "tsc --noEmit"
   },
-  "prettier": "@philippecorreges/standards/config/.prettierrc.json",
+  "prettier": "@iosoftwareorg/standards/config/.prettierrc.json",
   "dependencies": {},
   "devDependencies": {
-    "@philippecorreges/standards": "^0.1.0",
+    "@iosoftwareorg/standards": "^0.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.0.0",

@@ -24,7 +24,7 @@ cp templates/.github/dependabot.yml <projet>/.github/dependabot.yml
 
 ## 3. Fusionner les scripts, le champ `prettier`, et les `devDependencies` de `templates/package.json`
 
-Ne pas écraser — merge. `@philippecorreges/standards` doit apparaître dans `devDependencies`.
+Ne pas écraser — merge. `@iosoftwareorg/standards` doit apparaître dans `devDependencies`.
 
 ## 4. Installer
 
@@ -48,7 +48,7 @@ npm run lint && npm test
 ## 7. Mettre à jour plus tard
 
 ```bash
-npm update @philippecorreges/standards
+npm update @iosoftwareorg/standards
 ```
 
 Ou laisser Dependabot ouvrir la PR automatiquement.
