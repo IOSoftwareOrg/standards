@@ -34,5 +34,6 @@ npm run lint && npm test
 
 - Secrets (Settings → Secrets and variables → Actions)
 - Environnements `staging` / `production` avec approbation manuelle sur `production`
+- Créer la branche `dev`, protéger `main` et `dev` (PR + 1 review + CI obligatoires, pas de push direct)
 
 C'est fait. Le détail de chaque règle est dans `STANDARDS.md`, le détail de chaque étape dans `docs/SETUP.md`.

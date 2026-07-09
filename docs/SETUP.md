@@ -46,3 +46,10 @@ Dans GitHub → Settings → Secrets and variables → Actions, ajouter les secr
 ## 6. Environnements protégés (déploiement production)
 
 Dans GitHub → Settings → Environments, créer `staging` et `production`, et exiger une approbation manuelle sur `production` pour respecter la règle "Manual approval required for production" de `STANDARDS.md`.
+
+## 7. Branche `dev` et protection des branches
+
+1. Créer la branche `dev` depuis `main` : `git checkout -b dev && git push -u origin dev`.
+2. Dans GitHub → Settings → Branches, ajouter une règle de protection pour `main` ET pour `dev` : exiger une Pull Request avant merge, au moins 1 review, et que les checks CI (`test.yml`) passent. Interdire le push direct sur les deux.
+3. Définir `dev` comme branche par défaut du repo (Settings → Branches → Default branch) si tu veux que les nouvelles PR de contributeurs pointent vers `dev` plutôt que `main`.
+4. Workflow au quotidien : créer une branche depuis `dev` (`feature/...`, `fix/...`) → PR vers `dev` → une fois validé, PR de `dev` vers `main` pour une release.
